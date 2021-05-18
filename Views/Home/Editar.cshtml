@@ -1,0 +1,50 @@
+@model PortifolioMVC.Models.Aula;
+
+
+@{
+    ViewData["Title"] = "Editar Video Aula";
+}
+
+ <div id="wrapper">
+        
+        <h1>Editar Video Aula</h1>
+        <p id="pMensagem">@ViewBag.Mensagem</p>
+    </div>
+
+    <div >
+ 
+            <form asp-action="Editar" method="POST">
+                <input type="hidden" asp-for="idaula">
+                <p class="posicao-Input">
+                    <label asp-for=Nome >nome do video</label>
+                    <input asp-for=Nome required />                
+                </p>
+
+                    <p class="posicao-Input">
+                    <label asp-for=ImagemUrl >Url da Imagem</label>
+                    <input asp-for=ImagemUrl required/>
+                </p>
+
+                <p class="posicao-Input">
+                    <label asp-for=VideoUrl >Url do video</label>
+                    <input asp-for=VideoUrl required/>
+                </p>
+
+                    <p class="posicao-Input">
+                    <label asp-for=Duracao >Digite a Duração do Video</label>
+                    <input type="number" asp-for=Duracao required/>
+                </p>
+
+                <p class="posicao-Input">
+                    <label asp-for=Preco >Digite o Preço da Video Aula</label>
+                    <input type="number" asp-for=Preco required/>
+                </p>
+                    
+                    <button type="submit">Editar Aula</button>
+
+            </form>
+
+      
+         
+        
+    </div>

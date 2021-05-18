@@ -1,0 +1,39 @@
+@model PortifolioMVC.Models.Usuario;
+
+
+@{
+    ViewData["Title"] = "Cadastro de Usuario";
+}
+
+<section class="contato">
+      <div class="container">
+          <form asp-action="Cadastro" method="POST" >
+              <div class="row">
+                  <div class="col-lg-4 col-md-4 col-sm-12">
+                    <h1>Cadastro de Usuario</h1>
+                     <h3>Cadastre o usuario para visualizar</h3>
+                     <p id="pMensagem">@ViewBag.Mensagem</p>
+                  </div>
+                  <div class="col-lg-8 col-md-8 col-sm-12 right">
+                     <div class="form-group">
+                       <input asp-for="nomeusuario" type="text" class="form-control form-control-lg" placeholder="Digite o nome" name="nomeusuario" required>
+                     </div>
+                     <div class="form-group">
+                       <input asp-for="login" type="text" class="form-control form-control-lg" placeholder="Digite o login" name="login" required>
+                     </div>
+
+                      <div class="form-group">
+                       <input asp-for="senha" type="password" class="form-control form-control-lg" placeholder="Cadastre uma senha" name="senha">
+                     </div>
+
+                     <div class="form-group">
+                       <input asp-for="tipousuario" type="text" class="form-control form-control-lg" placeholder="Tipo de Acesso: Administrador ou Aluno" name="tipousuario" required>
+                     </div>
+
+                     <input type="submit" class="btn btn-primary  " value="Cadastrar Usuario">
+
+                  </div>
+              </div>
+          </form>
+      </div>
+  </section>

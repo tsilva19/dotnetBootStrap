@@ -1,0 +1,52 @@
+@using PortifolioMVC.Models
+@using Microsoft.AspNetCore.Http
+@model IEnumerable<PortifolioMVC.Models.Usuario>
+
+@{
+    ViewData["Title"] = "Aulas";
+}
+<section class="contato">
+    <div class="container">
+        <table class="table table-striped">
+  <thead>
+    <tr>
+     <tr>
+            <th scope="col">Id do Usuário</th>
+            <th scope="col">Nome do Usuário</th>
+            <th scope="col">Login do Usuário</th>
+            <th scope="col">Senha do Usuário</th>
+            <th scope="col">Tipo de Usuário</th>
+             @foreach (Usuario usuario in Model){
+                  @if(usuario.tipousuario == "Administrador"){
+                 <th>Ações</th>
+             }
+             }
+    </tr>
+  </thead>
+  <tbody>
+        @foreach (Usuario usuario in Model)
+        {
+            <tr>
+                <td>@usuario.idusuario</td>
+                <td>@usuario.nomeusuario</td>
+                <td>@usuario.senha</td>
+                <td>@usuario.login</td>
+                @if(usuario.tipousuario == "Administrador"){
+                    <td>Administrador</td>
+                }else @if(usuario.tipousuario == "Aluno"){
+                     <td>Aluno</td>
+                }
+
+                 @if(usuario.tipousuario == "Administrador"){
+                <td>
+                    <a style="text-decoration=none; color=white; font-weight: bold; " href="Editar?Id=@usuario.idusuario" >Editar </a> |                
+                    <a style="text-decoration=none; color=white; font-weight: bold; " href="Remover?Id=@usuario.idusuario" >Deletar</a>
+                </td>
+                 }
+            </tr>
+        }
+    </tbody>
+</table>
+
+    </div>
+</section>

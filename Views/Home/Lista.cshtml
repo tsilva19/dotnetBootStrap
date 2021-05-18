@@ -1,0 +1,63 @@
+﻿@using PortifolioMVC.Models
+@using Microsoft.AspNetCore.Http
+@model IEnumerable<PortifolioMVC.Models.Aula>
+
+@{
+    ViewData["Title"] = "Aulas";
+}
+
+<section class="contato" >
+    <div class="container">
+        <h1>Aulas do Portifolio</h1>
+        <div class="row">
+   
+         <div class="col-md-12 ">
+               <div class="card-group">
+                 <div class="card">
+                   <img src="https://img.youtube.com/vi/x4FdZd2-_uU/maxresdefault.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title"> <a href="https://youtu.be/x4FdZd2-_uU" target="_blank">Visualizar aula 1</a></h5>
+                    <p class="card-text">57 min.</p>
+                    <p class="card-text"><small class="text-muted">Free</small></p>
+                    </div>
+                 </div>
+                    <div class="card">
+                        <img src="https://img.youtube.com/vi/GykTLqODQuU/maxresdefault.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title"><a href="https://youtu.be/GykTLqODQuU " target="_blank">Visualizar aula 2</a></h5>
+                        <p class="card-text">57 min.</p>
+                        <p class="card-text"><small class="text-muted">Free</small></p>
+                        </div>
+                    </div>
+                <div class="card">
+                        <img src="https://img.youtube.com/vi/HN1UjzRSdBk/maxresdefault.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title"> <a href="https://youtu.be/HN1UjzRSdBk" target="_blank">Visualizar aula 3</a> </h5>
+                        <p class="card-text">57 min.</p>
+                        <p class="card-text"><small class="text-muted">Free</small></p>
+                        </div>
+                    </div>
+            </div>
+        </div>
+       
+        <div class="row">
+          @foreach (Aula aula in Model)
+        {
+         <div class="col-md-4 ">
+               <div class="card-group">
+                 <div class="card">
+                   <img src="@aula.ImagemUrl" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title"> <a href="@aula.VideoUrl" target="_blank">Visualizar @aula.Nome</a></h5>
+                    <p class="card-text">@aula.Duracao min</p>
+                    <p class="card-text"><small class="text-muted">@aula.Preco R$</small></p>
+                    </div>
+                 </div>
+                   
+                
+            </div>
+        </div>
+        }
+    </div>
+  </section>
+

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "AZsiRDAABT870Q5n3MrWv/Dr5rTZMIptKsLk3/c3kopIJJZRvFkrY42Ba4p4UGL6OX61IxjINdNUG+Gtw28GRA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\tgsv\\Downloads\\PortifolioMVC2 (2)\\PortifolioMVC2\\PortifolioMVC\\PortifolioMVC.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\tgsv\\.nuget\\packages\\mysqlconnector\\1.2.1\\mysqlconnector.1.2.1.nupkg.sha512"
+  ],
+  "logs": []
+}
